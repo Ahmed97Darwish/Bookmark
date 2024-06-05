@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Assignment</title>
+    <link rel="icon" href="/image/bookmark.png" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- https://github.com/Ahmed97Darwish/Bookmark_Ass.git -->
+
+    <div id="demo">
+        <div class="container">
+            <header class="header py-5">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h1 class="py-2 position-relative">Bookmarker</h1>
+                </div>
+            </header>
+
+            <div class="bookmark-body ">
+                <header class="p-3 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+                    <h2>
+                        <i class="fa-solid fa-bookmark one"></i>
+                        Bookmark your favorite sites
+                        <i class="fa-solid fa-bookmark two"></i>
+                    </h2>
+                </header>
+
+
+                <div class="form mt-3">
+                    <div class="form-floating mt-3 mb-3">
+                        <input oninput="validateInpute(this)" type="text" class="form-control border-0 border-bottom rounded-bottom-0" id="siteName" placeholder="Site Name">
+                        <div class="alert alert-danger mt-1 py-2 d-none">
+                            <p class="my-0">Product Name Must Have at Least 4 Chars And The Max Width 12 Chars .......</p>
+                        </div>
+                        <label for="siteName"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+                    </div>
+            
+                    <div class="form-floating mt-3">
+                        <input oninput="validateInpute(this)" type="url" class="form-control border-0 border-bottom rounded-bottom-0" id="siteURL" placeholder="Site URL">
+                        <div class="alert alert-danger mt-1 py-2 d-none">
+                            <p class="my-0">- URL Must Be Valid EX:- (https://www.example.com) .......</p>
+                            <p class="my-0">- URL Can Contains ftp, http or https .......</p>
+                            <p class="my-0">- URL Can Contains www Or Not .......</p>
+                        </div>
+                        <label for="SiteURL"><i class="fa-solid fa-link pe-2"></i> Site URL</label>
+                    </div>
+            
+                    <div class="links d-flex justify-content-center align-items-center my-4">
+                        <div id="addBtn" class="btn d-inline-block px-4">Submit</div>
+                        <div id="updateBtn" class="btn d-none  px-4" onclick="updateSite()">Update Site</div>
+                    </div>
+        
+                </div>
+            </div>
+    
+            <div class="form-floating mt-5 w-50 m-auto">
+                <input onkeyup='productSearch(this.value)' type="text" class="form-control border-1 rounded-3" id="siteSearch" placeholder="Site Search">
+                <label for="productSearch">Search WebSite</label>
+            </div>
+
+            <div id="sitesRow" class="row mt-5">
+
+                <div class="table-responsive text-center mx-auto w-75">
+                    <table class="table align-middle">
+                        <thead>
+                            <th>Index</th>
+                            <th>WebSite Name</th>
+                            <th>Visit</th>
+                            <th>Actions</th>
+                        </thead>
+                        <tbody id="tbody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

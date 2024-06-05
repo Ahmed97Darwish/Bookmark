@@ -1,0 +1,83 @@
+body {
+    font-family: "PT Sans Caption", sans-serif;
+    background-color: #f7ecde;
+}
+
+::selection {
+    background-color: #fec260;
+    color: #352e28;
+}
+
+#demo .header h1 {
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+    isolation: isolate;
+}
+
+#demo .header  h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 10px;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1;
+}
+
+#demo .header  h1:hover::before {
+    height: 50%;
+}
+
+#demo .bookmark-body h2 {
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#demo .bookmark-body h2 svg.one{
+    color: #3ca55c;
+}
+
+#demo .bookmark-body h2 svg.two{
+    color: #b5ac49; 
+}
+
+#demo .header,
+#demo .form {
+    border-bottom: 3px dotted #ccc;
+}
+
+#demo .header {
+    font-family: "Pacifico", cursive;
+}
+
+.form-control:focus {
+    box-shadow: none
+}
+
+#demo #addBtn,
+#demo #updateBtn {
+    background-color: #d1512d;
+    border: 1px solid #d1512d;
+    color: #f4f4f4;
+}
+
+#demo #addBtn:hover,
+#demo #updateBtn:hover {
+    background-color: #bb4120;
+}
+
+
+
+
+
+
+
+
+
